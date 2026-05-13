@@ -1,19 +1,3 @@
-function filterMovies() {
-    let input = document.getElementById('movieSearch').value.toLowerCase();
-    let movies = document.querySelectorAll('.movie-container');
-
-    movies.forEach(movie => {
-        let titleElement = movie.querySelector('.title');
-        if (titleElement) {
-            let titleText = titleElement.textContent.toLowerCase();
-            if (titleText.includes(input)) {
-                movie.style.display = "";
-            } else {
-                movie.style.display = "none"; 
-            }
-        }
-    });
-}
 const movieCards=document.querySelectorAll(".movie-card");
 const detailsSection=document.getElementById("detailsSection");
 const moviePoster=document.getElementById("moviePoster");
@@ -40,5 +24,19 @@ movieCards.forEach(card=>{
         detailsSection.scrollIntoView({
             behavior:"smooth"
         });
+    });
+});
+
+const searchInput=document.querySelector(".search-box input");
+searchInput.addEventListener("keyup",()=>{
+    const searchValue=searchInput.value.toLowerCase();
+    movieCards.forEach(card=>{
+        const movieName=card.dataset.title.toLowerCase();
+        if(movieName.includes(searchValue)){
+            card.style.display="block";
+        }
+        else{
+            card.style.display="none";
+        }
     });
 });
