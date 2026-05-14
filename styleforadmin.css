@@ -47,6 +47,11 @@
     background:red;
 }
 
+.list a{
+    text-decoration: none;
+    color:white;
+}
+
 .dashboard{
     flex:1;
     padding:30px;
