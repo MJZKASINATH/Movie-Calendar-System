@@ -10,7 +10,7 @@ body{
 }
 .header{
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
     padding:20px;
     background:#1f2937;
