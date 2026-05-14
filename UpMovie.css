@@ -7,6 +7,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.up{
+    font-size: 28px;
+}
 .main {
     margin: 40px auto;
     max-width: 1300px; /* Keep it from stretching infinitely on huge screens */
@@ -22,10 +25,12 @@ h1, h2, p {
     margin: 0;
     padding: 0;
 }
-
+.up{
+    margin-bottom: 20px;
+}
 h1 {
     margin-bottom: 40px;
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 700;
     letter-spacing: 1px;
 }
